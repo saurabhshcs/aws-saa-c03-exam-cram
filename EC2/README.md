@@ -130,3 +130,43 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
     </tr>
   </tbody>
 </table>
+<h2>EC2 Instance Lifecycle</h2>
+# Stopping EC2 instances
+- EBS backed instances only
+- No charge for stopped instances
+- EBS volumes remain attached (chargeable)
+- Data in RAM is lost
+- Instance is migrated to a different host
+- Private IPv4 addresses and IPv6 addresses retained; public IPv4 addresses released
+- Associated Elastic IPs retained
+
+# EC2 Instance Lifecycle: Hibernating EC2 instances
+- Applies to on-demand or reserved Linux instances
+- Contents of RAM saved to EBS volume
+- Must be enabled for hibernation when launched
+- Specific prerequisites apply
+- When started (after hibernation):
+  - The EBS root volume is restored to its previous state
+  - The RAM contents are reloaded
+  - The processes that were previously running on the instance are resumed
+  - Previously attached data volumes are reattached and the instance retains its instance ID
+
+# EC2 Instance Lifecycle: Rebooting EC2 instances
+- Equivalent to an OS reboot
+- DNS name and all IPv4 and IPv6 addresses retained
+- Does not affect billing
+
+# Retiring EC2 instances
+- Instances may be retired if AWS detects irreparable failure of the underlying hardware that hosts the instance
+- When an instance reaches its scheduled retirement date, it is stopped or terminated by AWS
+
+# EC2 Instance Lifecycle: Terminating EC2 instances
+- Means deleting the EC2 instance
+- Cannot recover a terminated instance
+- By default root EBS volumes are deleted
+
+# Recovering EC2 instances
+- CloudWatch can be used to monitor system status checks and recover instance if needed
+- Applies if the instance becomes impaired due to underlying hardware / platform issues
+- Recovered instance is identical to original instance
+
