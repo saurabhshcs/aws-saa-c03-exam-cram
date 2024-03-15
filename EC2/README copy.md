@@ -1,5 +1,5 @@
 <h1 style="color: orange;">SAA-C03: Amazon Elastic Compute Cloud (EC2)</h1>
-
+  
 Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable computing capacity—literally, servers in Amazon's data centers—that you use to build and host your software systems.
 
 <h2>Amazon Elastic Compute Cloud (EC2)</h2>
@@ -34,11 +34,10 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
   <li><b>Secure –</b> Fully integrated with Amazon VPC and security features</li>
   <li><b>Inexpensive –</b> Low cost, pay for what you use</li>
 </ul>
-</details>
 
 <details>
   <summary><h2 style="color: orange;">Public, Private and Elastic IP addresses</h2></summary>
-
+  
 <table border="2" style="border-color: white;">
   <thead>
     <tr>
@@ -88,7 +87,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
 
 <details>
   <summary><h2 style="color: orange;">EC2 Placement Groups</h2></summary>
-
+  
 <ul>
   <li>
     <strong>Cluster</strong> – packs instances close together inside an Availability Zone. This strategy enables workloads to achieve the low-latency network performance necessary for tightly-coupled node-to-node communication that is typical of HPC applications
@@ -104,7 +103,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
 
 <details>
   <summary><h2 style="color: orange;">NAT Instance vs NAT Gateway</h2></summary>
-
+  
 <table border="2" style="border-color: white;">
   <thead>
     <tr>
@@ -147,7 +146,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
 
 <details>
   <summary><h2 style="color: orange;">EC2 Instance Lifecycle</h2></summary>
-
+  
 # Stopping EC2 instances
 - EBS backed instances only
 - No charge for stopped instances
