@@ -82,8 +82,7 @@ When you create an AWS account, you begin with one sign-in identity that has com
 
 </details>
 
-<details>
-  <summary>AWS IAM Best Practices</summary>
+<h2>AWS IAM Best Practices</h2>
 
 <ul>
   <li>Lock away your AWS account root user access keys</li>
@@ -103,5 +102,3 @@ When you create an AWS account, you begin with one sign-in identity that has com
   <li>Use policy conditions for extra security</li>
   <li>Monitor activity in your AWS account</li>
 </ul>
-
-</details>
