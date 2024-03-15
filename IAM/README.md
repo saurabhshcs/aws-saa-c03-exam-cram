@@ -1,3 +1,9 @@
+<h1>SAA-C03: AWS Identity and Access Management (AWS IAM)</h1>
+AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. With IAM, you can centrally manage permissions that control which AWS resources users can access. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+
+When you create an AWS account, you begin with one sign-in identity that has complete access to all AWS services and resources in the account. This identity is called the AWS account root user and is accessed by signing in with the email address and password that you used to create the account. We strongly recommend that you don't use the root user for your everyday tasks. Safeguard your root user credentials and use them to perform the tasks that only the root user can perform. For the complete list of tasks that require you to sign in as the root user,
+
+<h2>Exam Cram for AWS Identity and Access Management (AWS IAM)</h2>
 <details>
   <summary>AWS Identity and Access Management (AWS IAM)</summary>
 
