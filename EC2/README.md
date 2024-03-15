@@ -2,7 +2,6 @@
 Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable computing capacity—literally, servers in Amazon's data centers—that you use to build and host your software systems.
 
 <h2>Amazon Elastic Compute Cloud (EC2)</h2>
-
 <ul>
   <li>With Amazon EC2 you launch virtual server instances on the AWS cloud</li>
   <li>Each virtual server is known as an “instance”</li>
@@ -22,26 +21,29 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
 
   <li>Instance metadata is data about your instance that you can use to configure or manage the running instance</li>
   <li>User data is data that is supplied by the user at instance launch in the form of a script</li>
-  <li>Instance metadata is available at http://169.254.169.254/latest/meta-data/</li>
-  <li>Instance user data is available at: http://169.254.169.254/latest/user-data</li>
-  <li>Elastic computing – easily launch hundreds to thousands of EC2 instances within minutes</li>
-  <li>Complete control – you control the EC2 instances with full root/administrative access</li>
-  <li>Flexible – Choice of instance types, operating systems, and software packages</li>
-  <li>Reliable – EC2 offers very high levels of availability and instances can be rapidly commissioned and replaced</li>
-  <li>Secure – Fully integrated with Amazon VPC and security features</li>
-  <li>Inexpensive – Low cost, pay for what you use</li>
+  <li>Instance metadata is available at http://xxx.xxx.xxx.xxx/latest/meta-data/</li>
+  <li>Instance user data is available at: http://xxx.xxx.xxx.xxx/latest/user-data</li>
+  </ul>
+  <h2>Benefits of Amazon EC2</h2>
+  <ul>
+  <li><b>Elastic computing –</b> easily launch hundreds to thousands of EC2 instances within minutes</li>
+  <li><b>Complete control –</b> you control the EC2 instances with full root/administrative access</li>
+  <li><b>Flexible –</b> Choice of instance types, operating systems, and software packages</li>
+  <li><b>Reliable –</b> EC2 offers very high levels of availability and instances can be rapidly commissioned and replaced</li>
+  <li><b>Secure –</b> Fully integrated with Amazon VPC and security features</li>
+  <li><b>Inexpensive –</b> Low cost, pay for what you use</li>
 </ul>
 <h2>Public, Private and Elastic IP addresses</h2>
 <table border="2" style="border-color: white;">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th style="color: orange;">Name</th>
+      <th style="color: orange;">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Public IP address</td>
+      <th style="color: orange;">Public IP address</td>
       <td>
         <ul>
           <li>Lost when the instance is stopped</li>
@@ -53,7 +55,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
       </td>
     </tr>
     <tr>
-      <td>Private IP address</td>
+      <th style="color: orange;">Private IP address</td>
       <td>
         <ul>
           <li>Retained when the instance is stopped</li>
@@ -65,7 +67,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
       </td>
     </tr>
     <tr>
-      <td>Elastic IP address</td>
+      <th style="color: orange;">Elastic IP address</td>
       <td>
         <ul>
           <li>Static Public IP address</li>
@@ -74,6 +76,57 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
           <li>Can be moved between instances and Elastic Network Adapters</li>
         </ul>
       </td>
+    </tr>
+  </tbody>
+</table>
+<h2>EC2 Placement Groups</h2>
+<ul>
+  <li>
+    <strong>Cluster</strong> – packs instances close together inside an Availability Zone. This strategy enables workloads to achieve the low-latency network performance necessary for tightly-coupled node-to-node communication that is typical of HPC applications
+  </li>
+  <li>
+    <strong>Partition</strong> – spreads your instances across logical partitions such that groups of instances in one partition do not share the underlying hardware with groups of instances in different partitions. This strategy is typically used by large distributed and replicated workloads, such as Hadoop, Cassandra, and Kafka
+  </li>
+  <li>
+    <strong>Spread</strong> – strictly places a small group of instances across distinct underlying hardware to reduce correlated failures
+  </li>
+</ul>
+<h2>NAT Instance vs NAT Gateway</h2>
+<table border="2" style="border-color: white;">
+  <thead>
+    <tr>
+      <th style="color: orange;">NAT Instance</th>
+      <th style="color: orange;">NAT Gateway</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Managed by you (e.g. software updates)</td>
+      <td>Managed by AWS</td>
+    </tr>
+    <tr>
+      <td>Scale up (instance type) manually and use Elastic scalability up to 45 Gbps enhanced networking</td>
+      <td>No high availability – scripted/auto-scaled</td>
+    </tr>
+    <tr>
+      <td>Provides automatic high availability within an AZ</td>
+      <td>HA possible using multiple NATs in multiple subnets and can be placed in multiple AZs</td>
+    </tr>
+    <tr>
+      <td>Need to assign Security Group</td>
+      <td>No Security Groups</td>
+    </tr>
+    <tr>
+      <td>Can use as a bastion host</td>
+      <td>Cannot access through SSH</td>
+    </tr>
+    <tr>
+      <td>Use an Elastic IP address or a public IP address with a NAT instance</td>
+      <td>Choose the Elastic IP address to associate with a NAT gateway at creation</td>
+    </tr>
+    <tr>
+      <td>Can implement port forwarding through manual customisation</td>
+      <td>Does not support port forwarding</td>
     </tr>
   </tbody>
 </table>
